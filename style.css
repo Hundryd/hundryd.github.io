@@ -1,11 +1,2 @@
-.container {
-    text-align: center; /* Center-align the content horizontally */
-}
+/* CSS Document */
 
-.social-icons {
-    margin-top: 10px; /* Adjust the top margin to create space between the main logo and social icons */
-}
-
-.social-icons img {
-    margin: 0 5px; /* Adjust the margin between the social icons */
-}
