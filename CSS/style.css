@@ -1,13 +1,108 @@
-/* Let's style the base */
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: black;
+/* Reset Default Styles */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-/* Media Query */
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: Corbel, sans-serif;
+}
+
+body {
+    overflow: hidden;
+    background-image: url('../Pictures/background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* Container for Logo and Social Links */
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo Styling */
+.logo-section {
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/* Social Links Styling */
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 60px;
+    height: 60px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Landscape Orientation */
 @media only screen and (min-width: 1024px) and (orientation: landscape) {
-    background-color: black;
+    body {
+        background-color: black;
+    }
+
+    .content h1 {
+        font-size: 4vw;
+    }
+}
+
+/* Portrait Orientation */
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+    .content h1 {
+        font-size: 8vw;
+    }
+
+    .logo {
+        max-width: 300px;
+    }
+
+    .social-icon {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+/* Small Devices */
+@media only screen and (max-width: 480px) {
+    .content h1 {
+        font-size: 10vw;
+    }
+
+    .logo {
+        max-width: 200px;
+    }
+
+    .social-icon {
+        width: 40px;
+        height: 40px;
+    }
 }
