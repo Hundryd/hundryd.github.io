@@ -1,0 +1,13 @@
+/* Let's style the base */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Query */
+@media only screen and (min-width: 1024px) and (orientation: landscape) {
+    background-color: black;
+}
