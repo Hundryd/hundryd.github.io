@@ -6,9 +6,6 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="CSS/style.css">
-	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta http-equiv="Expires" content="0">
 </head>
 <body>
 	<div class="container">
@@ -28,10 +25,12 @@
 			<a href="https://music.apple.com/us/artist/hundryd/1652977120" target="_blank">
 				<img src="Pictures/apple.png" alt="Apple Music" class="social-icon">
 			</a>
-			<a href="https://music.amazon.com/artists/B0BLF4MRFK/hundryd" target="_blank">
-				<img src="Pictures/amazon.png" alt="YouTube" class="social-icon">
-			</a>
 		</div>
 	</div>
+	<script>
+		window.onload = function () {
+			location.reload(true); // Force a reload from the server, bypassing the cache
+		};
+	</script>
 </body>
 </html>
