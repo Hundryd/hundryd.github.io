@@ -1,4 +1,3 @@
-// ****************** UPDATE BUTTON ****************** //
 async function checkForUpdate() {
     try {
       const response = await fetch('/version.json', { cache: 'no-store' });
