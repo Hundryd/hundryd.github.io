@@ -1,5 +1,4 @@
 **Welcome to Hundryd readme, if you got here I am impressed!**
-(Font for art: Tahoma Bold)
 
 **TO DO WEBSITE:**
 - [x] Create versioning system
@@ -24,3 +23,10 @@
 - Hundryd Visions
 - Hundryd Gaming
 
+**ARTSTYLE**
+- Font: Tahoma Bold
+- Paint Hex Codes
+    #ffffff
+    #1d1d1d
+    #0c0c0c
+    #000000
