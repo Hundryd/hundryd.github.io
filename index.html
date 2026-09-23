@@ -1,37 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>Hundryd</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" type="image/png" href="Pictures/logo.png">
-	<link rel="stylesheet" href="index.css">
+    <title>Hundryd</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Pictures/logo.png">
+    <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-	<div class="container">
-		<div class="logo-section">
-			<img src="Pictures/logo.png" alt="Hundryd Logo" class="logo">
-		</div>
-		<div class="social-links">
-			<a href="https://www.patreon.com/Hundryd" target="_blank">
-				<img src="Pictures/patreon.png" alt="Patreon" class="social-icon">
-			</a>
-			<a href="https://www.youtube.com/@hundryd" target="_blank">
-				<img src="Pictures/youtube.png" alt="YouTube" class="social-icon">
-			</a>
-			<a href="https://open.spotify.com/artist/56K0Hjik9o8LLNT6zlMQNB?si=8MREer-tRGiI3cuuL9EJZQ" target="_blank">
-				<img src="Pictures/spotify.png" alt="Spotify" class="social-icon">
-			</a>
-			<a href="https://music.apple.com/us/artist/hundryd/1652977120" target="_blank">
-				<img src="Pictures/apple.png" alt="Apple Music" class="social-icon">
-			</a>
-			<a href="https://music.amazon.com/artists/B0BLF4MRFK/hundryd" target="_blank">
-				<img src="Pictures/amazon.png" alt="Amazon" class="social-icon">
-			</a>
-		</div>
-	</div>
-	<button id="updateButton" style="display: none; position: fixed; bottom: 10px; right: 10px; padding: 10px; background: red; color: white; border: none; cursor: pointer;" 
-	onclick="updateSite()">Update Available! Click to Refresh</button>
-	<script src="index.js"></script>	
+    <div class="page-shell">
+        <div class="page-frame">
+            <header class="topbar" aria-label="Website header">
+                <div class="brand-box">
+                    <div class="logo-wrap">
+                        <img src="Pictures/logo.png" alt="Hundryd Logo" class="logo">
+                    </div>
+                    <div class="brand-copy" aria-label="Brand text">
+                        <span class="brand-name">HUNDRYD</span>
+                        <span class="brand-tag">Music Producer and Creator of All Things Digital</span>
+                    </div>
+                </div>
+
+                <nav class="nav-links" aria-label="Main navigation">
+                    <button class="tab-button active" type="button" data-tab="social-links">Social Links</button>
+                    <button class="tab-button" type="button" data-tab="about-me">About Me</button>
+                    <button class="tab-button" type="button" data-tab="licensing">Licensing</button>
+                    <button class="tab-button" type="button" data-tab="music">Music</button>
+                    <button class="tab-button" type="button" data-tab="contact-me">Contact Me</button>
+                    <button class="tab-button" type="button" data-tab="sound-packs">Sound Packs</button>
+                </nav>
+            </header>
+
+            <main class="content-panel">
+                <div class="tab-panel active" id="social-links" data-panel>
+                    <div class="tab-header">
+                        <h2>Social Links</h2>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.patreon.com/Hundryd" target="_blank" rel="noreferrer" aria-label="Patreon">
+                            <img src="Pictures/patreon.png" alt="Patreon" class="social-icon">
+                        </a>
+                        <a href="https://www.youtube.com/@hundryd" target="_blank" rel="noreferrer"
+                            aria-label="YouTube">
+                            <img src="Pictures/youtube.png" alt="YouTube" class="social-icon">
+                        </a>
+                        <a href="https://open.spotify.com/artist/56K0Hjik9o8LLNT6zlMQNB?si=8MREer-tRGiI3cuuL9EJZQ"
+                            target="_blank" rel="noreferrer" aria-label="Spotify">
+                            <img src="Pictures/spotify.png" alt="Spotify" class="social-icon">
+                        </a>
+                        <a href="https://music.apple.com/us/artist/hundryd/1652977120" target="_blank" rel="noreferrer"
+                            aria-label="Apple Music">
+                            <img src="Pictures/apple.png" alt="Apple Music" class="social-icon">
+                        </a>
+                        <a href="https://music.amazon.com/artists/B0BLF4MRFK/hundryd" target="_blank" rel="noreferrer"
+                            aria-label="Amazon Music">
+                            <img src="Pictures/amazon.png" alt="Amazon Music" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="tab-panel" id="about-me" data-panel>
+                    <div class="tab-header">
+                        <h2>About Me</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="tab-panel" id="licensing" data-panel>
+                    <div class="tab-header">
+                        <h2>Licensing</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="tab-panel" id="music" data-panel>
+                    <div class="tab-header">
+                        <h2>Music</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="tab-panel" id="sound-packs" data-panel>
+                    <div class="tab-header">
+                        <h2>Sound Packs</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+
+                <div class="tab-panel" id="contact-me" data-panel>
+                    <div class="tab-header">
+                        <h2>Contact Me</h2>
+                    </div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <button id="updateButton" class="update-toast" type="button" aria-live="polite">
+        <span class="update-text">Website update</span>
+        <span class="update-action">Refresh</span>
+    </button>
+    <script src="index.js"></script>
 </body>
+
 </html>
