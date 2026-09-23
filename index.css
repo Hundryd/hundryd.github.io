@@ -3,6 +3,7 @@
     --line: rgba(255, 255, 255, 0.08);
     --text: #f3f7fb;
     --muted: rgba(220, 230, 240, 0.72);
+    --font-sans: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
 }
 
 * {
@@ -13,12 +14,22 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
 }
 
 body {
     min-height: 100vh;
     width: 100%;
-    font-family: Tahoma;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
     background-color: var(--bg-0);
     background-image: linear-gradient(180deg, rgba(2, 6, 10, 0.68), rgba(2, 6, 10, 0.9)), url('Pictures/background.jpg');
     background-size: cover;
@@ -30,6 +41,10 @@ body {
     justify-content: center;
     padding: clamp(18px, 3vw, 52px);
     position: relative;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 body::before {
@@ -120,7 +135,7 @@ a {
     align-items: flex-end;
     text-align: right;
     min-width: 0;
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: var(--font-sans);
 }
 
 .brand-name {
@@ -129,7 +144,7 @@ a {
     text-transform: uppercase;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.96);
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: var(--font-sans);
 }
 
 .brand-tag {
@@ -138,18 +153,25 @@ a {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: rgba(224, 230, 238, 0.7);
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: var(--font-sans);
     white-space: nowrap;
 }
 
 @media (max-width: 480px) {
     .brand-box {
         padding: 10px 12px;
+        gap: 12px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+        align-items: center;
     }
 
     .brand-copy {
         min-width: 0;
+        width: 100%;
         max-width: 100%;
+        text-align: right;
+        justify-self: stretch;
     }
 
     .brand-name {
@@ -158,9 +180,12 @@ a {
     }
 
     .brand-tag {
-        font-size: 0.52rem;
-        letter-spacing: 0.08em;
-        white-space: nowrap;
+        font-size: 0.48rem;
+        letter-spacing: 0.06em;
+        white-space: normal;
+        line-height: 1.35;
+        max-width: 100%;
+        width: 100%;
     }
 }
 
