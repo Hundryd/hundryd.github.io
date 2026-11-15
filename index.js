@@ -8,7 +8,6 @@ function showUpdatePrompt(version) {
 
     updateButton.dataset.version = version;
     updateButton.classList.add('visible');
-    document.body.classList.add('update-active');
 }
 
 function hideUpdatePrompt() {
@@ -16,7 +15,6 @@ function hideUpdatePrompt() {
     if (updateButton) {
         updateButton.classList.remove('visible');
     }
-    document.body.classList.remove('update-active');
 }
 
 async function checkForUpdate() {
@@ -75,21 +73,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (updateButton) {
         updateButton.addEventListener('click', updateSite);
     }
-
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabPanels = document.querySelectorAll('[data-panel]');
-
-    tabButtons.forEach((button) => {
-        button.addEventListener('click', () => {
-            const target = button.dataset.tab;
-
-            tabButtons.forEach((btn) => btn.classList.toggle('active', btn === button));
-            tabPanels.forEach((panel) => {
-                const isActive = panel.id === target;
-                panel.classList.toggle('active', isActive);
-            });
-        });
-    });
 
     checkForUpdate();
 });
